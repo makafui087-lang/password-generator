@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Password Generator</h1>
+        <p class="subtitle">Create strong and secure passwords</p>
+
+        <div class="password-box">
+            <input
+                type="text"
+                id="password"
+                placeholder="Your password appears here"
+                readonly
+                aria-label="Generated password"
+            >
+            <button id="copyBtn" type="button">Copy</button>
+        </div>
+
+        <div class="strength">
+            <span>Password strength:</span>
+            <strong id="strength">Not generated</strong>
+        </div>
+
+        <div class="settings">
+            <label for="length">
+                Password Length: <span id="lengthValue">16</span>
+            </label>
+            <input type="range" id="length" min="8" max="64" value="16">
+
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    Uppercase (A-Z)
+                </label>
+
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    Lowercase (a-z)
+                </label>
+
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    Numbers (0-9)
+                </label>
+
+                <label>
+                    <input type="checkbox" id="symbols" checked>
+                    Symbols (!@#$)
+                </label>
+            </div>
+        </div>
+
+        <button id="generateBtn" class="generate-btn" type="button">
+            Generate Password
+        </button>
+
+        <p id="message" role="status"></p>
+
+        <footer>
+            Built with HTML, CSS & JavaScript
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
